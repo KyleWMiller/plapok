@@ -1,0 +1,19 @@
+/*
+  SD Colors:
+    Primary #2D6FAD
+    Success #177E89
+    Black #021E29
+    Accent #FFE260
+    Warning #035182
+    Error #ED2D3B
+*/
+@font-face {
+  font-family: Avenir;
+  src: '../Avenir.ttc';
+  font-weight: 400;
+
+}
+body {
+  font-family:'Avenir', Helvetica, sans-serif;
+  background-color: lightgrey;
+}
