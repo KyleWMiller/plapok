@@ -5,6 +5,7 @@
     Black #021E29
     Accent #FFE260
     Warning #035182
+    Brand #035182
     Error #ED2D3B
 */
 @font-face {
@@ -16,4 +17,12 @@
 body {
   font-family:'Avenir', Helvetica, sans-serif;
   background-color: lightgrey;
+}
+.titleBar {
+  background-color: #035182;
+  color: white;
+}
+.titleBar h1 {
+  margin: 0px;
+  padding-top: 1vw;
 }
