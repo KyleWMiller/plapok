@@ -12,6 +12,12 @@ class App extends Component {
   constructor(state) {
     super()
     autoBind(this)
+    this.state = {
+      "user": {
+        "facilitator": false,
+        "name": ""
+      }
+    }
   }
   render() {
     return (
@@ -21,7 +27,7 @@ class App extends Component {
           <div className="container-fluid">
             <Route path="/account/create" component={CreateAcctPane}></Route>
             <Route path="/account/joinRoom" component={JoinRoomPane}></Route>
-            <Route path="/room/:roomNum/:user" component={RoomPane}></Route>
+            <Route path="/room/:roomName/" component={RoomPane}></Route>
           </div>
         </Router>
       </div>

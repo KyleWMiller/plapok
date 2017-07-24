@@ -1,17 +1,12 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
 import autoBind from "react-autobind"
 
 class CreateAcctPane extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     autoBind(this)
 
-    this.state = {
-      "user": {
-        "facilitator": false,
-        "name": ""
-      }
-    }
   }
   facilitatorCheck() {
     this.setState()
@@ -31,6 +26,8 @@ class CreateAcctPane extends Component {
             <input id="facilitator" type="checkbox" ref="facilitator" onClick={this.facilitatorCheck}/>
           </div>
         </div>
+
+        <Link to="/account/joinRoom">Continue</Link>
       </div>
     )
   }
