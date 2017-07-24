@@ -6,7 +6,10 @@
 #####Set up
 
 To start working with this app:
-`$ npm install` then
+
+`$ npm install`
+
+then
 
 `$ yarn start/npm start` I recommend yarn. If you were to take all the bee's knees from a beehive, thats how awesome yarn is. bees', plural possessive, not just bee's, possessive, knees.
 
