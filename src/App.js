@@ -4,35 +4,45 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 import autoBind from "react-autobind"
 
 import TitleBar from "./components/TitleBar"
-import CreateAcctPane from "./components/CreateAcctPane"
-import JoinRoomPane from "./components/JoinRoomPane"
+import AccountPane from "./components/AccountPane"
 import RoomPane from "./components/RoomPane"
 
-class App extends Component {
+
+
+
+
+export default class App extends Component {
   constructor(state) {
     super()
     autoBind(this)
     this.state = {
-      "user": {
-        "facilitator": false,
-        "name": ""
+      user: {
+        name: "",
+        facilitator: false,
+        avatar: ""
       }
     }
+  }
+  onInputChange(e) {
+    console.log(e.target.value)
+    let newName = Object.assign({}, this.state.user)
+    newName.name = e.target.value
+    this.setState({user: newName})
+  }
+  handelFacilitatorCheck() {
+    this.setState({facilitator: this.refs.facilitator.checked})
   }
   render() {
     return (
       <div>
-        <TitleBar/>
+        <TitleBar />
         <Router>
-          <div className="container-fluid">
-            <Route path="/account/create" component={CreateAcctPane}></Route>
-            <Route path="/account/joinRoom" component={JoinRoomPane}></Route>
-            <Route path="/room/:roomName/" component={RoomPane}></Route>
+          <div className="container">
+            <Route path="/" exact={true} component={AccountPane} />
+            <Route path="/room/:roomName/" component={RoomPane} />
           </div>
         </Router>
       </div>
     )
   }
 }
-
-export default App

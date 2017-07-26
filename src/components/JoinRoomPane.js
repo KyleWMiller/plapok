@@ -1,18 +1,12 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
 import autoBind from "react-autobind"
+import { Link } from "react-router-dom"
 
-class JoinRoomPane extends Component {
+export default class JoinRoomPane extends Component {
   constructor(props) {
     super(props)
     autoBind(this)
-    this.state = {
-      roomName: 'johnRoom'
-    }
-  }
-  handelBlur() {
-    console.log(this.state = this.refs.room)
-    // this.setState(this.state = this.ref.creator)
+
   }
   render() {
     return (
@@ -20,22 +14,20 @@ class JoinRoomPane extends Component {
         <div className="half col-md-6 text-center">
           <h3>Create a Room</h3>
           <label htmlFor="createName">Name</label>
-          <input id="createName" type="text" ref="room" onBlur={this.handelBlur}/>
+          <input id="createName" type="text" onChange={this.handelChange}/>
           <div className="row">
-            <Link to={`/room/${this.state.roomName}`}>Join Room</Link>
+            {/* <Link to={`/room/${this.state.roomName}`}>Create Room</Link> */}
           </div>
         </div>
         <div className="half col-md-6 text-center">
           <h3>Join a Room</h3>
           <label htmlFor="joinName">Name</label>
-          <input id="joinName" type="text" ref="room" onBlur={this.handelBlur}/>
+          <input id="joinName" type="text" onChange={this.handelChange}/>
           <div className="row">
-            <Link to={`/room/${this.state.roomName}`}>Join Room</Link>
+            {/* <Link to={`/room/${this.state.roomName}`}>Join Room</Link> */}
           </div>
         </div>
       </div>
     )
   }
 }
-
-export default JoinRoomPane

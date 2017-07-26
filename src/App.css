@@ -18,6 +18,10 @@ body {
   font-family:'Avenir', Helvetica, sans-serif;
   background-color: lightgrey;
 }
+.centered {
+  margin: auto;
+  max-width: 100%;
+}
 .titleBar {
   background-color: #035182;
   color: white;
@@ -25,4 +29,11 @@ body {
 .titleBar h1 {
   margin: 0px;
   padding-top: 1vw;
+}
+.card {
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 20px;
+  margin:  0px 15px 15px 0px;
+  background-color: yellow;
 }

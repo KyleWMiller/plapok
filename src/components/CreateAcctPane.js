@@ -1,8 +1,10 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
 import autoBind from "react-autobind"
 
-class CreateAcctPane extends Component {
+import AvatarsPane from "./AvatarsPane"
+
+
+export default class CreateAcctPane extends Component {
   constructor(props) {
     super(props)
     autoBind(this)
@@ -14,9 +16,9 @@ class CreateAcctPane extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Create an Account</h2>
+        <h2 className="text-center">Create an Account</h2>
 
-        <div className="row">
+        <div className="row text-center">
           <div className="col-md-6">
             <label htmlFor="name">Name</label>
             <input id="name" type="text"/>
@@ -27,10 +29,9 @@ class CreateAcctPane extends Component {
           </div>
         </div>
 
-        <Link to="/account/joinRoom">Continue</Link>
+        <AvatarsPane />
+
       </div>
     )
   }
 }
-
-export default CreateAcctPane

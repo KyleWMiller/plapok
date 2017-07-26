@@ -1,0 +1,8 @@
+easter eggs = must
+  don't count na || infinity
+
+Trigger method = must
+
+what is everyone's volume set at right now
+
+facilitator option to push voice reader to tell <user> to vote
