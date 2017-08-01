@@ -1,30 +1,31 @@
 import React, { Component } from "react"
-import autoBind from "react-autobind"
 import { Link } from "react-router-dom"
 
 export default class JoinRoomPane extends Component {
-  constructor(props) {
-    super(props)
-    autoBind(this)
+  // constructor(props) {
+  //   super(props)
+  //
+  //
+  // }
 
-  }
   render() {
+    console.log(this.props.roomName)
     return (
       <div className="container">
-        <div className="half col-md-6 text-center">
+        <div className="half col m6 s12 center-align">
           <h3>Create a Room</h3>
           <label htmlFor="createName">Name</label>
-          <input id="createName" type="text" onChange={this.handelChange}/>
+          <input id="createName" type="text" onChange={this.props.roomNameChange}/>
           <div className="row">
-            {/* <Link to={`/room/${this.state.roomName}`}>Create Room</Link> */}
+            <Link to={`/room/${this.props.roomName}`}>Create Room</Link>
           </div>
         </div>
-        <div className="half col-md-6 text-center">
+        <div className="half colm6 s12 center-align">
           <h3>Join a Room</h3>
           <label htmlFor="joinName">Name</label>
-          <input id="joinName" type="text" onChange={this.handelChange}/>
+          <input id="joinName" type="text" onChange={this.props.roomNameChange}/>
           <div className="row">
-            {/* <Link to={`/room/${this.state.roomName}`}>Join Room</Link> */}
+            <Link to={`/room/${this.props.roomName}`}>Join Room</Link>
           </div>
         </div>
       </div>

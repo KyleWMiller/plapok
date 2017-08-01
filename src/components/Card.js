@@ -9,7 +9,7 @@ export default class Card extends Component {
   }
   render() {
     return (
-      <div className="col-md-3 card text-center" onClick={this.props.onClick}>
+      <div className="col-md-3 card text-center" onClick={this.props.handleClick}>
         {this.props.fib}
       </div>
     )

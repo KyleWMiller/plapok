@@ -23,7 +23,7 @@ body {
   max-width: 100%;
 }
 .titleBar {
-  background-color: #035182;
+  background-color: black;
   color: white;
 }
 .titleBar h1 {
@@ -36,4 +36,7 @@ body {
   padding: 20px;
   margin:  0px 15px 15px 0px;
   background-color: yellow;
+}
+.menu {
+
 }

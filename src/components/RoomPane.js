@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import autoBind from "react-autobind"
-import update from "immutability-helper"
 import io from "socket.io-client"
 
 import Card from "./Card"
@@ -32,28 +31,21 @@ export default class RoomPane extends Component {
   }
   cardSelector(e) {
     console.log(e.target.innerHTML)
-    let newCard = update(this.state.card, {
-      user: {$set: this.state.user},
-      num: {$set: e.target.innerHTML}
-    })
+    let newCard = Object.assign({}, this.state.card)
+    newCard.user = this.state.user
+    newCard.card = e.target.innerHTML
     this.setState({card: newCard})
     console.log(this.state.card)
     socket.emit('card selected', this.state.card)
-    this.setState({card: {user: "", num: null}})
-  }
-  cardSetter(card) {
-    // console.log(card)
-    let newCards = Object.assign({}, this.state.cards)
-    // console.log(newCards)
-    // this.setState()
   }
   render() {
+    console.log(this.state.card)
     return (
       <div>
         <div className="row">
           <div className="col-md-10 col-md-offset-2">
             {this.state.fibos.map((fib) => {
-              return <Card fib={fib} key={fib} onClick={this.cardSelector}/>
+              return <Card fib={fib} key={fib} handleClick={this.cardSelector}/>
             })}
           </div>
         </div>
