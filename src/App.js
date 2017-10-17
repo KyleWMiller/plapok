@@ -26,7 +26,7 @@ export default class App extends Component {
     newName.name = e.target.value
     this.setState({user: newName})
   }
-  handelFacilitatorCheck= () => {
+  handelFacilitatorCheck = () => {
     this.setState({facilitator: this.refs.facilitator.checked})
   }
   toggleVisibility = () => {
@@ -41,7 +41,7 @@ export default class App extends Component {
         <Sidebar.Pushable as={Segment}>
           <Sidebar as={Menu} animation="push" width="thin" visible={this.state.visible} icon="labeled" vertical inverted>
             <Menu.Item name="home">
-              <Icon name="home" inverted />
+             <Icon name="home" inverted />
               Home
             </Menu.Item>
             <Menu.Item name="gamepad">
