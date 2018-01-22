@@ -44,9 +44,10 @@ export default class RoomPane extends Component {
       <div>
         <div className="row">
           <div className="col-md-10 col-md-offset-2">
-            {this.state.fibos.map((fib) => {
-              return <Card fib={fib} key={fib} handleClick={this.cardSelector}/>
-            })}
+           {this.state.user}
+              {/* {this.state.fibos.map((fib) => {
+                  return <Card fib={fib} key={fib} handleClick={this.cardSelector}/>
+                  })} */}
           </div>
         </div>
         <div className="row">

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./App.css"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import { Sidebar, Segment,  Menu,  Icon, } from "semantic-ui-react"
+import { SocketProvider, socketConnect } from "socket.io-react"
 
 import TitleBar from "./components/TitleBar"
 import AccountPane from "./components/AccountPane"
@@ -53,8 +54,6 @@ export default class App extends Component {
               Channels
             </Menu.Item>
           </Sidebar>
-          <Sidebar.Pusher>
-            <Segment basic>
               <Router>
                 <div>
                   <Route path="/" exact={true} component={AccountPane} />
