@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import "./App.css"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import { Sidebar, Segment,  Menu,  Icon, } from "semantic-ui-react"
-import { SocketProvider, socketConnect } from "socket.io-react"
 
 import TitleBar from "./components/TitleBar"
 import AccountPane from "./components/AccountPane"
@@ -27,7 +26,7 @@ export default class App extends Component {
     newName.name = e.target.value
     this.setState({user: newName})
   }
-  handelFacilitatorCheck = () => {
+  handelFacilitatorCheck= () => {
     this.setState({facilitator: this.refs.facilitator.checked})
   }
   toggleVisibility = () => {
@@ -42,7 +41,7 @@ export default class App extends Component {
         <Sidebar.Pushable as={Segment}>
           <Sidebar as={Menu} animation="push" width="thin" visible={this.state.visible} icon="labeled" vertical inverted>
             <Menu.Item name="home">
-             <Icon name="home" inverted />
+              <Icon name="home" inverted />
               Home
             </Menu.Item>
             <Menu.Item name="gamepad">
@@ -54,6 +53,8 @@ export default class App extends Component {
               Channels
             </Menu.Item>
           </Sidebar>
+          <Sidebar.Pusher>
+            <Segment basic>
               <Router>
                 <div>
                   <Route path="/" exact={true} component={AccountPane} />

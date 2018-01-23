@@ -14,9 +14,6 @@ export default class AccountPane extends Component {
   handleRoomChange = (e) => {
     this.setState({roomName: e.target.value})
   }
-  joinRoomEvent = () => {
-    socket.emit('join room', this.state.user)
-  }
   render() {
     return (
       <div className="container fullWindow">

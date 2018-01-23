@@ -1,5 +1,7 @@
-const api = require('express').Router()
+const apiRouter = require('express').Router()
 
-api.post('/joinRoom', () => {
-    console.log('someone has joined the room') 
+apiRouter.post('/joinRoom', () => {
+    console.log('someone has joined the room')
 })
+
+module.exports = apiRouter

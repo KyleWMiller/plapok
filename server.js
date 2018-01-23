@@ -12,7 +12,7 @@ var express = require("express"),
   // morgan logs the requests that are made to your server and gives color coded status //
   logger = require('morgan'),
   path = require('path'),
- // apiRouter = require('./apiRoutes'),
+ apiRouter = require('./apiRoutes'),
   port = process.env.PORT || 8080
 
 app.use(logger('dev'))
@@ -29,4 +29,3 @@ io.on('connection', (socket) => {
       console.log(user)
   })
 })
-
