@@ -33,6 +33,8 @@ To start server side script:
 
 What are tests? lulz
 
+ok maybe Jest
+
 
 ## Deployment
 
